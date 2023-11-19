@@ -7,12 +7,12 @@ function App() {
 
   useEffect(() => {
     // Carregue os produtos do backend
-    axios.get('http://localhost:8000/api/produtos/')
+    axios.get('http://localhost:4242/api/produtos/')
       .then(response => setProdutos(response.data))
       .catch(error => console.error('Erro ao buscar produtos:', error));
 
     // Carregue as vendas do backend
-    axios.get('http://localhost:8000/api/vendas/')
+    axios.get('http://localhost:4242/api/vendas/')
       .then(response => setVendas(response.data))
       .catch(error => console.error('Erro ao buscar vendas:', error));
   }, []);
